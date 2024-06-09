@@ -3,6 +3,7 @@ import ToastContainer from '@/app/_context/ToastProvider'
 import '@/app/_styles/globals.css'
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react'
 
 const josefin = Josefin_Sans({ subsets: ['latin'], display: 'swap' })
 
@@ -58,6 +59,7 @@ export default function RootLayout({
           </div>
         </div>
         <ToastContainer />
+        <Analytics />
         <div id='root-portal-modal'></div>
       </body>
     </html>
