@@ -86,13 +86,13 @@ function BookingCard({ booking, onDelete, onRefund }: TProps) {
 
         <div className='flex gap-5 mt-auto mb-2 items-baseline'>
           <p className='text-xl font-semibold text-accent-400'>${totalPrice}</p>
-          <ul className='ms-4 list-disc flex space-x-8'>
+          <ul className='max-sm:ms-3 sm:ms-4 list-disc flex max-sm:space-x-6 sm:space-x-8'>
             <li className='text-lg text-primary-300 whitespace-nowrap'>
               {numOfGuests} guest{numOfGuests > 1 && 's'}
             </li>
             {hasBreakfast && (
               <li className='text-lg text-primary-300 whitespace-nowrap'>
-                Breakfast included
+                With Breakfast
               </li>
             )}
           </ul>
