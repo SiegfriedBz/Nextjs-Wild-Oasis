@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     }
 
     // add stripe_intent_id to booking to handle future possible stripe refund
-    const paidBooking = await updateBooking({
+    await updateBooking({
       id: bookingId,
       updatedFields: { is_paid: true, stripe_intent_id: paymentIntent }
     })
