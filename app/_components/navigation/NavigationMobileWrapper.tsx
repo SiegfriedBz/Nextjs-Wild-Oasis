@@ -28,7 +28,7 @@ const NavigationMobileWrapper = ({ children }: TProps) => {
       <ModalProvider.Window isFullHeight={true} windowNameToOpen='mobile-nav'>
         <div
           className='z-[999999]
-            h-[100svh]
+            h-[100lvh]
             w-full
             flex flex-col items-center justify-center
             mx-auto 
