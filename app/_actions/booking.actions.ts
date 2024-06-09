@@ -82,7 +82,6 @@ export async function deleteBookingAction({
     const data = await deleteBooking(bookingId)
 
     // Revalidate path
-    // TODO ?
     revalidatePath('/account/bookings')
 
     return data
