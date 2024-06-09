@@ -28,9 +28,6 @@ export async function POST(request: NextRequest) {
     const bookingId = parseInt(referenceId as string, 10)
     const paymentIntent = checkoutSessionCompleted.payment_intent as string
 
-    console.log(`Stripe webhook CHECKOUT bookingId`, bookingId)
-    console.log(`Stripe webhook CHECKOUT paymentIntent`, paymentIntent)
-
     if (!bookingId) {
       return new Response(`Webhook Error: bookingId not found`, {
         status: 400
