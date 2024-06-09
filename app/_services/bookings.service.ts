@@ -58,13 +58,14 @@ export async function getBookedDatesByCabinId(cabinId: number) {
   today.setUTCHours(0, 0, 0, 0)
   today = today.toISOString()
 
-  // Getting bookings
+  // Getting NON-REFUNDED bookings for this cabin
   const { data, error }: PostgrestSingleResponse<TBookingData[]> =
     await supabase
       .from('bookings')
       .select('*')
       .eq('cabin_id', cabinId)
       .or(`start_date.gte.${today},status.eq.checked-in`)
+      .is('stripe_refund_amount', null)
 
   if (error) {
     console.error(error)
@@ -147,7 +148,6 @@ export async function deleteBooking(id: number) {
     })
   }
 
-  console.log('=== deleteBooking data', data)
   return data
 }
 
