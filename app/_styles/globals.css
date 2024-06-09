@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '~react-toastify/dist/ReactToastify.min.css';
+
+:root {
+  --header-h: 6rem;
+  --toastify-color-success: #ddc2a2;
+}
+
+@layer base {
+  p {
+    @apply text-primary-200 
+      max-sm:text-justify
+      max-sm:text-base sm:text-lg
+      max-sm:leading-8
+      sm:leading-6;
+  }
+}
+
+@layer components {
+  /* sizes */
+  .btn {
+    @apply tracking-wide
+      font-semibold
+      text-lg
+      rounded-md
+      max-sm:px-4 max-sm:py-3 
+      sm:px-8 sm:py-6;
+  }
+
+  .btn-sm {
+    @apply tracking-wide
+      font-semibold
+      text-lg
+      rounded-md
+      px-4 py-2;
+  }
+
+  .btn-xs {
+    @apply tracking-wide
+      font-bold
+      text-xs
+      uppercase 
+      rounded-md
+      px-3 py-2;
+  }
+
+  /* colors */
+  .btn-accent {
+    @apply text-primary-800 
+      hover:text-accent-200
+      u-gradient-accent 
+      hover:from-accent-600 hover:to-accent-600 
+      ring-1 ring-transparent
+      hover:ring-accent-200 
+      transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply text-primary-300 
+      border-b border-primary-800 
+      bg-gradient-to-r from-primary-950 to-primary-900
+      hover:from-accent-600 hover:to-accent-500
+      hover:text-primary-900
+      transition-all duration-300;
+  }
+
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme('colors.primary.900');
+    border-right-color: theme('colors.primary.200');
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme('colors.primary.200');
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+@layer utilities {
+  .u-gradient-accent {
+    @apply bg-gradient-to-r 
+      from-accent-600 to-accent-500;
+  }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .u-no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .u-no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* For date picker */
+.rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme('colors.accent.500') !important;
+  --rdp-background-color: theme('colors.accent.600') !important;
+  margin: 0 !important;
+}
