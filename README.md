@@ -3,7 +3,7 @@
 Next.js 14 application with App Router and Server Actions allowing users to book cabins at the Wild Oasis hotel.  
 Users can navigate different cabins, sign up with Google and create an account.  
 Logged-in users can securely book cabins using Stripe for payment.  
-Users can also get a refund if conditions are met.
+Users can also get a refund if the conditions are met.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -86,7 +86,7 @@ npm start
 ## Frontend:
 - **Framework**: React, Next.js 14 (App Router)
 - **React Hook Form**, **Zod** (for client-side validation)
-- **React Select**** (for forms customization)
+- **React Select** (for forms customization)
 - **Styling**: Tailwind CSS, responsive design
 
 ## Backend:
