@@ -86,6 +86,7 @@ npm start
 ## Frontend:
 - **Framework**: React, Next.js 14 (App Router)
 - **React Hook Form**, **Zod** (for client-side validation)
+- **React Select**** (for forms customization)
 - **Styling**: Tailwind CSS, responsive design
 
 ## Backend:
