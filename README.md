@@ -4,6 +4,8 @@ Next.js 14 application with App Router and Server Actions allowing users to book
 Users can navigate different cabins, sign up with Google and create an account.  
 Logged-in users can securely book cabins using Stripe for payment.  
 Users can also get a refund if the conditions are met.
+Styled with Tailwind.css.
+Optimistic UI.
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
